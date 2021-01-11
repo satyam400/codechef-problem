@@ -1,0 +1,17 @@
+t=int(input())
+l=['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p']
+
+def fun(st):
+    #print(st)
+    d={'0000':'a','0001':'b','0010':'c','0100':'e','1000':'i','1001':'j','1010':'k','1100':'m','1101':'n','1110':'o','1111':'p','0110':'g','0011':'d','0111':'h','0101':'f','1011':'l'}
+
+    return d[st]
+
+
+for  j in range(0,t):
+    n=int(input())
+    s=str(input())
+    ans = ""
+    for i in range(0,n,4):
+        ans += fun(s[i:i+4])
+    print(ans)
